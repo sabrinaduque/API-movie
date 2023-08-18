@@ -2,7 +2,7 @@ const knex = require("../database/knex")
 const { hash, compare } = require("bcryptjs")
 const AppError = require("../utils/AppError");
 
-class UserController {
+class UsersController {
   async create(request, response) {
     const { name, email, password } = request.body
 
@@ -64,4 +64,4 @@ class UserController {
   }
 }
 
-module.exports = UserController
+module.exports = UsersController
